@@ -100,6 +100,20 @@ img {
 }
 
 // ===============================
+// HERO NOTE (ADIÇÃO)
+// ===============================
+.hero-note {
+  display: block;
+  margin-bottom: 24px;
+  color: $yellow;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+  // letter-spacing: 0.5px;
+  // transform: rotate(-2deg);
+}
+
+// ===============================
 // BOTÃO
 // ===============================
 .btn-primary {
@@ -129,7 +143,7 @@ img {
 
   .ul-content {
     max-width: 50%;
-    margin: 0 auto; // 🔥 centralização real
+    margin: 0 auto;
   }
 }
 
@@ -156,11 +170,10 @@ img {
     line-height: 1.6;
   }
 
-  // 🔥 SOLUÇÃO DEFINITIVA
   .text {
     display: flex;
     flex-direction: column;
-    align-items: center; // centraliza tudo dentro
+    align-items: center;
   }
 
   .image {
@@ -225,6 +238,28 @@ img {
     margin: 0 auto 40px;
     color: $text;
     line-height: 1.6;
+  }
+}
+
+// ===============================
+// MENTORIA TECNOLÓGICA (ADIÇÃO)
+// ===============================
+.mentoring-tech {
+  margin-top: 32px;
+}
+
+// ===============================
+// NÃO É FRANQUIA (ADIÇÃO)
+// ===============================
+.no-franchise {
+  text-align: center;
+
+  .no-franchise-text {
+    max-width: 820px;
+    margin: 0 auto 20px;
+    color: $dark;
+    line-height: 1.7;
+    font-size: 1.05rem;
   }
 }
 
@@ -344,20 +379,19 @@ img {
     }
   }
 
-  // 🔥 HERO MOBILE CENTRALIZADO
   .hero {
     .hero-overlay {
       padding: 0 24px;
       background: rgba(0, 0, 0, 0.6);
-      justify-content: center; // centraliza verticalmente
+      justify-content: center;
     }
 
     .hero-content {
       max-width: 100%;
-      text-align: center;      // centraliza texto
+      text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center;     // centraliza logo e botão
+      align-items: center;
     }
 
     .hero-logo {
@@ -373,5 +407,10 @@ img {
       font-size: 1.1rem;
     }
   }
-}
 
+  // HERO NOTE MOBILE
+  .hero-note {
+    transform: none;
+    font-size: 1.2rem;
+  }
+}
