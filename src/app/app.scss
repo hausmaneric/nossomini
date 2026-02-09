@@ -409,6 +409,37 @@ img {
 }
 
 // ===============================
+// BOTÃO FLUTUANTE WHATSAPP (SOMENTE IMAGEM)
+// ===============================
+.whatsapp-float {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  width: 84px;
+  height: 84px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover .whatsapp-icon {
+  transform: scale(1.08);
+}
+
+.whatsapp-float:active .whatsapp-icon {
+  transform: scale(1);
+}
+
+// ===============================
 // RESPONSIVO
 // ===============================
 @media (max-width: 768px) {
@@ -462,5 +493,12 @@ img {
 
   .brands-track img {
     height: 40px;
+  }
+
+  .whatsapp-float {
+    bottom: 8px;
+    right: 8px;
+    width: 84px;
+    height: 84px;
   }
 }
