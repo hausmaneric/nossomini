@@ -307,6 +307,54 @@ img {
 }
 
 // ===============================
+// MARCAS PARCEIRAS
+// ===============================
+.brands {
+  text-align: center;
+}
+
+// ===============================
+// CARROSSEL
+// ===============================
+.brands-carousel {
+  max-width: 960px;   // 🔥 largura máxima
+  margin: 0 auto;     // 🔥 centralizado
+  overflow: hidden;
+  position: relative;
+}
+
+// ===============================
+// TRACK
+// ===============================
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: max-content;
+  animation: scrollBrands 25s linear infinite;
+
+  img {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+    // filter: grayscale(100%);
+
+  }
+}
+
+// ===============================
+// ANIMAÇÃO CONTÍNUA
+// ===============================
+@keyframes scrollBrands {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+// ===============================
 // CTA
 // ===============================
 .cta {
@@ -408,9 +456,11 @@ img {
     }
   }
 
-  // HERO NOTE MOBILE
-  .hero-note {
-    // transform: none;
-    // font-size: 1.4rem;
+  .brands-carousel {
+    max-width: 100%;
+  }
+
+  .brands-track img {
+    height: 40px;
   }
 }

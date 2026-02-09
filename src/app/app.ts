@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -17,6 +17,20 @@ export class App {
     element?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
+    });
+  }
+
+  @ViewChild('brandsTrack', { static: false })
+  brandsTrack!: ElementRef<HTMLDivElement>;
+
+  ngAfterViewInit(): void {
+    const track = this.brandsTrack.nativeElement;
+
+    // Duplica dinamicamente os logos (sem poluir o HTML)
+    const items = Array.from(track.children);
+
+    items.forEach((item: any) => {
+      track.appendChild(item.cloneNode(true));
     });
   }
 }
